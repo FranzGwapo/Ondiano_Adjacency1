@@ -35,22 +35,15 @@ int main(int argc, char *argv[]) {
 	state = addEdge(arr, "Marinduque", "Chile");
 	state = addEdge(arr, "Tokyo", "Marinduque");
 
-
 	
-	printf("WITH EDGES \n\n\n");
 	
-	for(i=0;i<26;++i){
-		if(strcmp(arr[i].key, "EMPTY")!=0){
-			printf("Vertex: %s Edges: ", arr[i].key);
-			for(j=0;j<arr[i].value.count;++j){
-				if(arr[i].value.count!=0 && strcmp(arr[i].value.arr[j].city, "NULL")!=0){
-					printf("%s, ", arr[i].value.arr[j].city);
-				}
-				
-			}
-			printf("\n");	
-		}
-		
-	}
+	printf("WITH EDGES \n\n");
+	displayList(arr);
+	
+	//DeleteEdge is in DeleteVertex Function
+	deleteVertex(arr, "Tokyo");
+	deleteVertex(arr, "Cebu");
+	printf("\nDELETED VERTEX(Tokyo and Cebu) \n\n");
+	displayList(arr);
 	return 0;
 }
