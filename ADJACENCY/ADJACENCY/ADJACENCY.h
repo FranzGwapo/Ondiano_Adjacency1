@@ -23,11 +23,13 @@ typedef struct{
 }List;
 
 void initList(List *list);
-void initDict(List *list, int num);
+//void initDict(List *list, int num);
 int Hash(int firstchar);
 bool addVertex(List *list, String key);
 bool addEdge(List *list,String vertex, String edge);
-
+bool deleteEdge(List *list, int index, String edge);
+bool deleteVertex(List *list, String vertex);
+void displayList(List *list);
 #endif
 //first letter of your word
 //count
